@@ -87,6 +87,6 @@ open class ScalingCarouselCell: UICollectionViewCell {
         mainView.alpha = alphaValue
         
         // ..also..round the corners
-        mainView.layer.cornerRadius = 20
+        mainView.layer.cornerRadius = 25
     }
 }
