@@ -86,6 +86,11 @@ open class ScalingCarouselCell: UICollectionViewCell {
         mainView.transform = affineIdentity.scaledBy(x: scaleValue, y: scaleValue)
         mainView.alpha = alphaValue
         
+        // added these to scale subviews too
+        for subview in subviews {
+            subview.transform = affineIdentity.scaledBy(x: scaleValue, y: scaleValue)
+        }
+        
         // ..also..round the corners
 //        mainView.layer.cornerRadius = 25
     }

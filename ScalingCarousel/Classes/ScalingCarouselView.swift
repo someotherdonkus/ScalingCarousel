@@ -17,6 +17,8 @@ import UIKit
  */
 open class ScalingCarouselView: UICollectionView {
 
+//    self.showsHorizontalScrollIndicator = false
+    
     // MARK: - Properties (Private)
 
     private var lastCurrentCenterCellIndex: IndexPath?
@@ -264,6 +266,9 @@ extension InvisibleScrollDelegate: UIScrollViewDelegate {
         for cell in visibleCells {
             if let infoCardCell = cell as? ScalingCarouselCell {
                 infoCardCell.scale(withCarouselInset: inset)
+//                for subview in infoCardCell.subviews {
+//                    subview.scale(withCarouselInset: inset)
+//                }
             }
         }
     }
